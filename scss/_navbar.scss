@@ -1,0 +1,116 @@
+//Navbar
+.navbar {
+    background-color: $showcasebg-color;
+    padding: 40px 10%;
+    border: 1px solid $showcasebg-color;
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+        justify-items: center;
+        
+
+        @media(max-width: 900px) {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            margin-left: -10%;
+        }
+
+        a.mobile-nav-btn{
+            color: white;
+            display: none;
+
+            @media(max-width: 900px) {
+                display: block;
+                scale: 2;
+                padding-left: 20px;
+                align-self: center;
+            }
+        }
+
+        .logo-reanmo {
+            @media(max-width: 900px)
+            {
+                align-self: center;
+                justify-self: center;
+                padding-left: 10%;
+                grid-column: 2 /span 2;
+            }  
+        }
+
+
+        ul {
+            display: grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            list-style: none;
+            column-gap: 25px;
+
+            @media(max-width: 900px) {
+                display: none;
+            }
+
+          
+
+            a {
+                text-decoration: none;
+                color: $H2light-color;
+                font-size: 16px;
+                font-weight: 200;
+               
+            }
+
+            a:hover {
+                font-size: 19px;
+                font-weight: 400;
+            }
+            a.current {
+                color: $blue-color;
+            }
+
+        }
+        a.btn {
+            width: 91px;
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            text-decoration: none;
+            height: 100%;
+            width: auto;
+            color: white;
+
+            @media(max-width: 900px) {
+                display: none;
+            }
+        }
+
+        a.btn:hover {
+            background-color: $blue-color-hover;
+            
+        }
+    }
+}
+
+//hidden Navbar Burgermenu
+
+#mobile-nav {
+    display: none;
+    border-radius: 10px;
+
+    a {
+        color: white;
+        background-color: $showcasebg-color;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    a:hover {
+        background-color: #001427d3;
+        cursor: pointer;
+    }
+}
